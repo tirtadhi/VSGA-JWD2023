@@ -1,1 +1,1 @@
-# VSGA-JWD2023
+Kumpulan tugas sertifikasi Junior Web Developer 2023
