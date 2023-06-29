@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tirta</title>
+  </head>
+  <body onload="pageLoaded()">
+    <form onsubmit="event.preventDefault(); formSubmitted();">
+      <pre>
+          NAMA            :<input type="text" name="nama" id="nama" placeholder="Solehun" required>
+  
+          NIM             :<input type="email" id="email" name="email" placeholder="yuhuu@gmail.com" required>
+  
+          KODE KELAS      :<input type="text" id="kelas" name="kelas" placeholder="02TPLK011" required>
+  
+          LOMBA           :<select id="lomba" name="lomba">
+                            <option value="">Pilih Lomba</option>
+                            <option value="CTF">Capture The Flag</option>
+                            <option value="Web Design">Web Design</option>
+                          </select>    
+        </pre>
+      <button type="submit">Kirim</button>
+    </form>
+    <script>
+      function formSubmitted() {
+        var nama = document.getElementById("nama").value;
+        var email = document.getElementById("email").value;
+        var kelas = document.getElementById("kelas").value;
+        var lomba = document.getElementById("lomba").value;
+
+        if (nama && email && kelas && lomba) {
+          alert("Formulir berhasil dikirim:\nNama: " + nama + "\nEmail: " + email + "\nKelas: " + kelas + "\nLomba: " + lomba);
+        } else {
+          alert("Mohon isi semua yang kosong!");
+        }
+      }
+
+      function pageLoaded() {
+        alert("Selamat Datang!");
+      }
+    </script>
+  </body>
+</html>
